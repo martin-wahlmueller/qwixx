@@ -1,0 +1,45 @@
+.button {
+    width: 7.5%;
+    height: 50px;
+    margin: 2px;
+    font-size: larger;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.green {
+    background-color: green;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.gray {
+    background-color: gray;
+}
+
+.black {
+    background-color: black;
+}
+
+.ticked {
+    font-size: larger;
+}
+
+.score {
+    width: 14.3%;
+    margin: 2px;
+    padding: 4px;
+    font-size: larger;
+}
+
+.totalscore {
+    color: white;
+}
