@@ -51,30 +51,29 @@ function insertFail(color) {
 function tickButton(event, color) {
     var clickedButton = $(event.target);
 
-    var validateRightButtonRule = isClickedButtonRightFromLastCrossdButton(color, clickedButton.val());
-    var validateForeLast = isCrossedButtonForeLast(color, clickedButton.val());
-    var validateGreaterThanFour = isCrossedCountGreaterThanFour(color);
+    if (clickedButton.val() !== "key") {
 
-    console.log("right-button-rule" + validateRightButtonRule);
-    console.log("validate-fore-last-rule" + validateForeLast);
-    console.log("validate-greater-than-4-rule" + validateGreaterThanFour);
+        var validateRightButtonRule = isClickedButtonRightFromLastCrossdButton(color, clickedButton.val());
+        var validateForeLast = isCrossedButtonForeLast(color, clickedButton.val());
+        var validateGreaterThanFour = isCrossedCountGreaterThanFour(color);
 
-    if (validateRightButtonRule) {
-        if (validateForeLast) {
-            if (validateGreaterThanFour) {
-                clickedButton.val("X");
-                var keyButton = $("#" + color + "key");
-                keyButton.val("X");
-                keyButton.addClass("ticked");
+        if (validateRightButtonRule) {
+            if (validateForeLast) {
+                if (validateGreaterThanFour) {
+                    clickedButton.val("X");
+                    var keyButton = $("#" + color + "key");
+                    keyButton.val("X");
+                    keyButton.addClass("ticked");
+                } else {
+                    alert("Du musst zuerst mindestens 5 Kreuze haben, bevor die die letzte Zahl ankreuzt!");
+                }
             } else {
-                alert("Du musst zuerst mindestens 5 Kreuze haben, bevor die die letzte Zahl ankreuzt!");
+                clickedButton.val("X");
+                clickedButton.addClass("ticked");
             }
         } else {
-            clickedButton.val("X");
-            clickedButton.addClass("ticked");
-        }     
-    } else {
-        alert("Werte links vom letzten 'X' dürfen nicht angeglickt werden!");
+            alert("Werte links vom letzten 'X' dürfen nicht angeglickt werden!");
+        }
     }
 
     calculateX(color);
