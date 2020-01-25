@@ -1,27 +1,129 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
     <link href="css/style.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" type="text/css" media="screen" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="js/functions.js"></script>
     <title>Quixx</title>
 </head>
 <body>
-    <div id="main">
-
+    <div id="redbuttongroup" class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <input id="red2" type="button" class="button red" value="2" />
+                <input id="red3" type="button" class="button red" value="3" />
+                <input id="red4" type="button" class="button red" value="4" />
+                <input id="red5" type="button" class="button red" value="5" />
+                <input id="red6" type="button" class="button red" value="6" />
+                <input id="red7" type="button" class="button red" value="7" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <input id="red8" type="button" class="button red" value="8" />
+                <input id="red9" type="button" class="button red" value="9" />
+                <input id="red10" type="button" class="button red" value="10" />
+                <input id="red11" type="button" class="button red" value="11" />
+                <input id="red12" type="button" class="button red" value="12" />
+                <input id="redkey" type="button" class="button red" value="key" />
+            </div>
+        </div>
     </div>
-    <div>
-        <input id="redscore" type="text" class="red score"/>
-        <input id="yellowscore" type="text" class="yellow score" />
-        <input id="greenscore" type="text" class="green score" />
-        <input id="bluescore" type="text" class="blue score" />
-        <input id="grayscore" type="text" class="gray score" />
-        
-        <input id="totalscore" type="text" class="black score totalscore"/>
+    <div id="yellowbuttongroup" class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <input id="yellow2" type="button" class="button yellow" value="2" />
+                <input id="yellow3" type="button" class="button yellow" value="3" />
+                <input id="yellow4" type="button" class="button yellow" value="4" />
+                <input id="yellow5" type="button" class="button yellow" value="5" />
+                <input id="yellow6" type="button" class="button yellow" value="6" />
+                <input id="yellow7" type="button" class="button yellow" value="7" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <input id="yellow8" type="button" class="button yellow" value="8" />
+                <input id="yellow9" type="button" class="button yellow" value="9" />
+                <input id="yellow10" type="button" class="button yellow" value="10" />
+                <input id="yellow11" type="button" class="button yellow" value="11" />
+                <input id="yellow12" type="button" class="button yellow" value="12" />
+                <input id="yellowkey" type="button" class="button yellow" value="key" />
+            </div>
+        </div>
+    </div>
+    <div id="greenbuttongroup" class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <input id="green12" type="button" class="button green" value="12" />
+                <input id="green11" type="button" class="button green" value="11" />
+                <input id="green10" type="button" class="button green" value="10" />
+                <input id="green9" type="button" class="button green" value="9" />
+                <input id="green8" type="button" class="button green" value="8" />
+                <input id="green7" type="button" class="button green" value="7" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <input id="green6" type="button" class="button green" value="6" />
+                <input id="green5" type="button" class="button green" value="5" />
+                <input id="green4" type="button" class="button green" value="4" />
+                <input id="green3" type="button" class="button green" value="3" />
+                <input id="green2" type="button" class="button green" value="2" />
+                <input id="greenkey" type="button" class="button green" value="key" />
+            </div>
+        </div>
+    </div>
+    <div id="bluebuttongroup" class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <input id="blue12" type="button" class="button blue" value="12" />
+                <input id="blue11" type="button" class="button blue" value="11" />
+                <input id="blue10" type="button" class="button blue" value="10" />
+                <input id="blue9" type="button" class="button blue" value="9" />
+                <input id="blue8" type="button" class="button blue" value="8" />
+                <input id="blue7" type="button" class="button blue" value="7" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <input id="blue6" type="button" class="button blue" value="6" />
+                <input id="blue5" type="button" class="button blue" value="5" />
+                <input id="blue4" type="button" class="button blue" value="4" />
+                <input id="blue3" type="button" class="button blue" value="3" />
+                <input id="blue2" type="button" class="button blue" value="2" />
+                <input id="bluekey" type="button" class="button blue" value="key" />
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="graybuttongroup" class="row">
+            <div class="col-xs-12">
+                <input type="button" class="button gray" value="" />
+                <input type="button" class="button gray" value="" />
+                <input type="button" class="button gray" value="" />
+                <input type="button" class="button gray" value="" />
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div id="score" class="row">
+            <div class="col-xs-12">
+                <input id="redscore" type="text" class="button red score" /><label>+</label>
+                <input id="yellowscore" type="text" class="button yellow score" /><label>+</label>
+                <input id="greenscore" type="text" class="button green score" /><label>+</label>
+                <input id="bluescore" type="text" class="button blue score" /><label>-</label>
+                <input id="grayscore" type="text" class="button gray score" /><label>=</label>
+
+                <input id="totalscore" type="text" class="button black score totalscore" />
+            </div>
+        </div>
     </div>
 </body>
 </html>

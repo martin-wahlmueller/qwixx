@@ -1,24 +1,45 @@
-.button {
-    width: 7.5%;
-    height: 50px;
-    margin: 2px;
-    font-size: larger;
+.blue {
+    background-color: #99b3ff; /*80%*/
+    border-color: #002db3;
+    color: #002db3; /*35%*/
 }
 
-.blue {
-    background-color: blue;
+#bluebuttongroup {
+    display: inline-block;
+    background-color: #99b3ff;
 }
 
 .green {
-    background-color: green;
+    background-color: #adebad; /*80%*/
+    border-color: #196619;
+    color: #196619; /*25%*/
+}
+
+#greenbuttongroup {
+    display: inline-block;
+    background-color: #adebad;
 }
 
 .red {
-    background-color: red;
+    background-color: #ff9999; /*80%*/
+    border-color: #b30000;
+    color: #b30000; /*35%*/
+}
+
+#redbuttongroup {
+    display: inline-block;
+    background-color: #b30000;
 }
 
 .yellow {
-    background-color: yellow;
+    background-color: #ffff99; /*80%*/
+    border-color: #808000;
+    color: #808000; /*25%*/
+}
+
+#yellowbuttongroup {
+    display: inline-block;
+    background-color: #ffff99;
 }
 
 .gray {
@@ -29,17 +50,38 @@
     background-color: black;
 }
 
-.ticked {
+.button {
+    width: 60px;
+    max-width: 60px;
+    height: 50px;
+    margin: 2px;
     font-size: larger;
+    border-radius: 8px;
 }
 
 .score {
-    width: 14.3%;
+    border: 2px;
+    border-style: solid;
+    border-radius: 8px;
+    font-size: larger;
     margin: 2px;
     padding: 4px;
+    text-align: center;
+    max-width: 70px;
+}
+
+.ticked {
+    color: black;
     font-size: larger;
 }
 
 .totalscore {
     color: white;
+}
+
+label {
+    font-family: 'Comic Sans MS';
+    font-size: larger;
+    font-weight: bolder;
+    color: gray;
 }

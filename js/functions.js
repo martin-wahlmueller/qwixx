@@ -1,51 +1,36 @@
 ﻿$(document).ready(function () {
-    insertRow("red");
-    insertRow("yellow");
-    insertRowReverse("green");
-    insertRowReverse("blue");
-    insertFail("gray");
+
+    $(":button").on("click", function (event) {
+        tickButtonNew(event);
+    });
+
+    calculateFailX("gray");
+    calculateX("red");
+    calculateX("yellow");
+    calculateX("green");
+    calculateX("blue");
+    calculateTotalScore();
 });
 
-function insertRow(color) {
-    var main = $("#main");
-    valuesForward().forEach(function (item) {
-        var button = $("<input>").attr("type", "button").attr("value", item);
-        button.attr("id", color + item);
-        button.attr("class", "button " + color);
-        button.on("click", function (event) {
-            tickButton(event, color);
-        });
-        main.append(button);
-    });
-    main.append("</br>");
+function tickButtonNew(event) {
+    var clickedButton = $(event.target);
+
+    var color = getColor(clickedButton);
+    tickButton(event, color);
 }
 
-function insertRowReverse(color) {
-    var main = $("#main");
-    valuesBackward().forEach(function(item) {
-        var button = $("<input>").attr("type", "button").attr("value", item);
-        button.attr("id", color + item);
-        button.attr("class", "button " + color);
-        button.on("click", function (event) {
-            tickButton(event, color);
-        });
-        main.append(button);
-    });
-    main.append("</br>");
-}
-
-function insertFail(color) {
-    var main = $("#main");
-    for (i = 0; i < 4; i++) {
-        var button = $("<input>").attr("type", "button");
-        button.attr("id", color + i);
-        button.attr("class", "button " + color);
-        button.on("click", function (event) {
-            tickButton(event, color);
-        });
-        main.append(button);
+function getColor(element) {
+    if (element.hasClass("red")) {
+        return "red";
+    } else if (element.hasClass("yellow")) {
+        return "yellow";
+    } else if (element.hasClass("green")) {
+        return "green";
+    } else if (element.hasClass("blue")) {
+        return "blue";
+    } else {
+        return "no color";
     }
-    main.append("</br>");
 }
 
 function tickButton(event, color) {
@@ -61,6 +46,7 @@ function tickButton(event, color) {
             if (validateForeLast) {
                 if (validateGreaterThanFour) {
                     clickedButton.val("X");
+                    clickedButton.addClass("ticked");
                     var keyButton = $("#" + color + "key");
                     keyButton.val("X");
                     keyButton.addClass("ticked");
@@ -117,7 +103,7 @@ function calculateFail(countX) {
 }
 
 function calculateTotalScore() {
-    var redScore = parseInt($("#redscore").val()) > 0 ? parseInt($("#redscore").val()) : 0;
+    var redScore = parseInt($("#redscore").val()) ? parseInt($("#redscore").val()) : 0;
     var yellowScore = parseInt($("#yellowscore").val()) > 0 ? parseInt($("#yellowscore").val()) : 0;
     var greenScore = parseInt($("#greenscore").val()) > 0 ? parseInt($("#greenscore").val()) : 0;
     var blueScore = parseInt($("#bluescore").val()) > 0 ? parseInt($("#bluescore").val()) : 0;
@@ -125,14 +111,6 @@ function calculateTotalScore() {
 
     var sum = redScore + yellowScore + greenScore + blueScore + grayScore;
     $("#totalscore").val(sum);
-}
-
-function valuesForward() {
-    return [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, "key"];
-}
-
-function valuesBackward() {
-    return [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, "key"];
 }
 
 function isClickedButtonRightFromLastCrossdButton(color, crossIndex) {
