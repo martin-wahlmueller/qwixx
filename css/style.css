@@ -5,7 +5,7 @@
 }
 
 #bluebuttongroup {
-    display: inline-block;
+    
     background-color: #99b3ff;
 }
 
@@ -16,7 +16,7 @@
 }
 
 #greenbuttongroup {
-    display: inline-block;
+  
     background-color: #adebad;
 }
 
@@ -27,7 +27,7 @@
 }
 
 #redbuttongroup {
-    display: inline-block;
+    
     background-color: #b30000;
 }
 
@@ -38,7 +38,7 @@
 }
 
 #yellowbuttongroup {
-    display: inline-block;
+   
     background-color: #ffff99;
 }
 
