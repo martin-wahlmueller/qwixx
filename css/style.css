@@ -4,9 +4,10 @@
     color: #002db3; /*35%*/
 }
 
-#bluebuttongroup {
-    
+.bluebuttongroup {
     background-color: #99b3ff;
+    display: inline-block;
+    margin-right: -0.25em;
 }
 
 .green {
@@ -15,9 +16,10 @@
     color: #196619; /*25%*/
 }
 
-#greenbuttongroup {
-  
+.greenbuttongroup {
     background-color: #adebad;
+    display: inline-block;
+    margin-right: -0.25em;
 }
 
 .red {
@@ -26,9 +28,10 @@
     color: #b30000; /*35%*/
 }
 
-#redbuttongroup {
-    
+.redbuttongroup {
     background-color: #b30000;
+    display: inline-block;
+    margin-right: -0.25em;
 }
 
 .yellow {
@@ -37,9 +40,14 @@
     color: #808000; /*25%*/
 }
 
-#yellowbuttongroup {
-   
+.yellowbuttongroup {
     background-color: #ffff99;
+    display: inline-block;
+    margin-right: -0.25em;
+}
+
+.button-container {
+    display:inline-block;
 }
 
 .gray {
@@ -64,10 +72,8 @@
     border-style: solid;
     border-radius: 8px;
     font-size: larger;
-    margin: 2px;
-    padding: 4px;
     text-align: center;
-    max-width: 70px;
+    max-width: 60px;
 }
 
 .ticked {
